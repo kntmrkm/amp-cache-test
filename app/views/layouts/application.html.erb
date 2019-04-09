@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="google-site-verification" content="6OFYg8clx8mhHS0mKVUyWT0-X0qLrZr3qvHUypSoAcs" />
+    <link rel="amphtml" href="<%= request.url&.gsub('html', 'amp') %>">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
