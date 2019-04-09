@@ -1,7 +1,11 @@
-<h1>AMP TEST</h1>
+<h1>My AMP TEST</h1>
+<h6>6OFYg8clx8mhHS0mKVUyWT0-X0qLrZr3qvHUypSoAcs</h6>
 <p>
   <%= Time.zone.now.to_s %>
 </P>
+
+<%= link_to 'html', home_path(format: :html) %>
+<%= link_to 'amp', home_path(format: :amp) %>
 
 <% if ENV['ACTIVATE_IMAGE'].present? %>
 <amp-img src="<%= asset_url('koala.jpg') %>" width="300" height="200"></amp-img>
