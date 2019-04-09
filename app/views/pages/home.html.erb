@@ -3,4 +3,6 @@
   <%= Time.zone.now.to_s %>
 </P>
 
+<% if ENV['ACTIVATE_IMAGE'].present? %>
 <amp-img src="<%= asset_url('koala.jpg') %>" width="300" height="200"></amp-img>
+<% end %>
