@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    expires_in 1.hour, public: true
+    expires_in 1.minute, public: true
 
     if request.format.symbol == :amp
     end
