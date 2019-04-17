@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/kntmrkm/google-amp-cache.git
-  revision: e3770c794f133de24449611cc127364f0408bbae
+  revision: aa0d1b2cbc97701580c18459cd1669fde1cfb96e
   specs:
     google-amp-cache (0.1.0)
       httparty (>= 0.7.6)
