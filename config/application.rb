@@ -19,5 +19,17 @@ module AmpCacheTest
     # curl -I http:/lvh.me:3002/.well-known/amphtml/apikey.pub
     # ルーティングを作って返してもよいはず
     Rack::Mime::MIME_TYPES[".pub"]="text/plain"
+
+    if Rails.env.production?
+      config.assets.compress = true
+      config.assets.quiet = true
+      config.active_record.logger = nil
+      config.lograge.enabled = true
+      config.lograge.custom_payload do |controller|
+        {
+          user_agent: controller.request.user_agent,
+        }
+      end    
+    end
   end
 end

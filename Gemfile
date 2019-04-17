@@ -5,6 +5,7 @@ ruby '2.6.2'
 
 #gem 'google-amp-cache'
 gem 'google-amp-cache', github: 'kntmrkm/google-amp-cache'
+gem 'lograge', '0.10.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
