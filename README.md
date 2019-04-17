@@ -12,13 +12,20 @@
   - 認証情報を作ってAPIキーを取得する
   - 環境変数に設定する（GOOGLE_AMP_API_KEY）
 
+## メモ
+
+`https://amp--cache--test-herokuapp-com.cdn.ampproject.org/c/s/amp-cache-test.herokuapp.com/home.amp`
+上記にアクセスすると、Botが見にくるが、更新されるまでタイムラグが１分弱（体感）である感じ。
+
+
+
 ## 
 
 ```
 curl -I https://amp-cache-test.herokuapp.com/.well-known/amphtml/apikey.pub
 
 client = Google::AMP::Cache::Client.new ENV['GOOGLE_AMP_API_KEY'], File.read("#{Rails.root}/config/amp-cache-private-key.pem")
-client.update_cache('https://amp-cache-test.herokuapp.com/home.html')
+client.update_cache('https://amp-cache-test.herokuapp.com/home.amp')
 client.batch_get('https://amp-cache-test.herokuapp.com/home.html')
 ```
 
