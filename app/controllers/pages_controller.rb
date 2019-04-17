@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def root
-    render plain: 'root'
   end
 
   def home
