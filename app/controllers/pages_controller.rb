@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  def root
+    render plain: 'root'
+  end
+
   def home
     if request.format.symbol == :amp
     end
