@@ -15,7 +15,6 @@
 ## 
 
 ```
-curl -I http:/lvh.me:3002/.well-known/amphtml/apikey.pub
 curl -I https://amp-cache-test.herokuapp.com/.well-known/amphtml/apikey.pub
 
 client = Google::AMP::Cache::Client.new ENV['GOOGLE_AMP_API_KEY'], File.read("#{Rails.root}/config/amp-cache-private-key.pem")
