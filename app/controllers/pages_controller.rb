@@ -4,13 +4,13 @@ class PagesController < ApplicationController
   end
 
   def home
+    expires_in 1.hour
+    
     if request.format.symbol == :amp
     end
 
     respond_to do |format|
-      format.html do
-        expires_in 1.hour
-      end
+      format.html
       format.amp do
         lookup_context.formats = [:amp, :html] # .htmlのテンプレートも検索する
         render layout: 'amp'
