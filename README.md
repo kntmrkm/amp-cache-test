@@ -1,24 +1,5 @@
 # AMP キャッシュ更新
 
-## 設定概要
-
-- RSA 鍵を生成する configディレクトリ下でやればよい
-  - openssl genrsa 2048 > amp-cache-private-key.pem
-  - openssl rsa -in amp-cache-private-key.pem -pubout > amp-cache-public-key.pem
-  - amp-cache-public-key.pem を `public/.well-known/amphtml/apikey.pub` に設置する
-  - Railsの設定で `config/initializers/mime_types.rb` に `Rack::Mime::MIME_TYPES[".pub"]="text/plain"` を設定する
-- APIの有効化 https://console.cloud.google.com/
-  - Accelerated Mobile Pages (AMP) URL API
-  - 認証情報を作ってAPIキーを取得する
-  - 環境変数に設定する（GOOGLE_AMP_API_KEY）
-
-## メモ
-
-`https://amp--cache--test-herokuapp-com.cdn.ampproject.org/c/s/amp-cache-test.herokuapp.com/home.amp`
-上記にアクセスすると、Botが見にくるが、更新されるまでタイムラグが１分弱（体感）である感じ。
-
-
-
 ## 
 
 ```
