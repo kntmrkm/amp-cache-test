@@ -8,7 +8,9 @@ class PagesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html
+      format.html do
+        expires_in 1.hour
+      end
       format.amp do
         lookup_context.formats = [:amp, :html] # .htmlのテンプレートも検索する
         render layout: 'amp'
