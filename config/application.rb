@@ -16,6 +16,7 @@ module AmpCacheTest
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.time_zone = 'Tokyo'
     # curl -I http:/lvh.me:3002/.well-known/amphtml/apikey.pub
     # ルーティングを作って返してもよいはず
     Rack::Mime::MIME_TYPES[".pub"]="text/plain"
